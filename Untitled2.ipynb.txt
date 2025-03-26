@@ -1,0 +1,120 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Xag1uW7W8vK3"
+      },
+      "outputs": [],
+      "source": [
+        "#Q1.\n",
+        "def get_odd_numbers():\n",
+        "    odd_numbers_list = [x for x in range(1, 26) if x % 2 != 0]\n",
+        "    return odd_numbers_lit\n",
+        "#Q2.\n",
+        "def args_function(*args):\n",
+        "    result = 0\n",
+        "    for num in args:\n",
+        "        result += num\n",
+        "    return result\n",
+        "\n",
+        "def kwargs_function(**kwargs):\n",
+        "    for key, value in kwargs.items():\n",
+        "        print(f\"{key}: {value}\")\n",
+        "#Q3.\n",
+        "my_list = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]\n",
+        "my_iterator = iter(my_list)  # Initializing the iterator\n",
+        "\n",
+        "for _ in range(5):\n",
+        "    print(next(my_iterator))  # Iterating and printing\n",
+        "#Q4.\n",
+        "def count_up_to(n):\n",
+        "    i = 1\n",
+        "    while i <= n:\n",
+        "        yield i  # Yield keyword makes it a generator\n",
+        "        i += 1\n",
+        "\n",
+        "# Example usage:\n",
+        "for number in count_up_to(5):\n",
+        "    print(number)\n",
+        "#Q5.\n",
+        "def primes_less_than(n):\n",
+        "    primes = []\n",
+        "    for num in range(2, n):\n",
+        "        is_prime = True\n",
+        "        for i in range(2, int(num**0.5) + 1):\n",
+        "            if num % i == 0:\n",
+        "                is_prime = False\n",
+        "                break\n",
+        "        if is_prime:\n",
+        "            primes.append(num)\n",
+        "    for prime in primes:\n",
+        "        yield prime\n",
+        "\n",
+        "prime_generator = primes_less_than(1000)\n",
+        "\n",
+        "for _ in range(20):\n",
+        "    print(next(prime_generator))\n",
+        "#Q6.\n",
+        "def fibonacci_first_10():\n",
+        "    a, b = 0, 1\n",
+        "    count = 0\n",
+        "    while count < 10:\n",
+        "        print(a)\n",
+        "        a, b = b, a + b\n",
+        "        count += 1\n",
+        "\n",
+        "fibonacci_first_10()\n",
+        "#Q7.\n",
+        "string = 'pwskills'\n",
+        "result = [char for char in string]\n",
+        "print(result)\n",
+        "#Q8.\n",
+        "def is_palindrome(number):\n",
+        "    original_number = number\n",
+        "    reversed_number = 0\n",
+        "    while number > 0:\n",
+        "        digit = number % 10\n",
+        "        reversed_number = (reversed_number * 10) + digit\n",
+        "        number //= 10\n",
+        "    return original_number == reversed_number\n",
+        "#Q9.\n",
+        "odd_numbers = [num for num in range(1, 101) if num % 2 != 0]\n",
+        "print(odd_numbers)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "9-5lAyi0BU5e"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "c6_fRqbU-qmZ"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
